@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="welcome-box animate__bounceIn">
+        <h1>MEMORY GAME</h1>
+        <button id="start-btn">
+          Click to play
+        </button>
+      </div>
+      <div class="summary-box animate__bounceIn">
+        <div class="overlay">
+          <h1>
+            Congratulation
+            <!-- <img src="./img/party.svg" /> -->
+          </h1>
+          <p id="show-time">Your time</p>
+          <table id="table" class="table table-sm table-borderless"></table>
+          <button id="restart-btn">
+            Play again
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="memory-game">
+      <!-- <button id="stop-btn">Stop</button> -->
+      <div class="memory-card" data-name="codesandbox">
+        <i data-feather="codesandbox" class="font-face"></i>
+        <i data-feather="github" class="back-face"></i>
+      </div>
+      <div class="memory-card" data-name="linkedin">
+        <i data-feather="linkedin" class="font-face"></i>
+        <i data-feather="github" class="back-face"></i>
+      </div>
+      <div class="memory-card" data-name="codesandbox">
+        <i data-feather="codesandbox" class="font-face"></i>
+        <i data-feather="github" class="back-face"></i>
+      </div>
+      <div class="memory-card" data-name="facebook">
+        <i data-feather="facebook" class="font-face"></i>
+        <i data-feather="github" class="back-face"></i>
+      </div>
+      <div class="memory-card" data-name="twitter">
+        <i data-feather="twitter" class="font-face"></i>
+        <i data-feather="github" class="back-face"></i>
+      </div>
+      <div class="memory-card" data-name="facebook">
+        <i data-feather="facebook" class="font-face"></i>
+        <i data-feather="github" class="back-face"></i>
+      </div>
+      <div class="memory-card" data-name="twitter">
+        <i data-feather="twitter" class="font-face"></i>
+        <i data-feather="github" class="back-face"></i>
+      </div>
+      <div class="memory-card" data-name="youtube">
+        <i data-feather="youtube" class="font-face"></i>
+        <i data-feather="github" class="back-face"></i>
+      </div>
+      <div class="memory-card" data-name="instagram">
+        <i data-feather="instagram" class="font-face"></i>
+        <i data-feather="github" class="back-face"></i>
+      </div>
+      <div class="memory-card" data-name="youtube">
+        <i data-feather="youtube" class="font-face"></i>
+        <i data-feather="github" class="back-face"></i>
+      </div>
+      <div class="memory-card" data-name="linkedin">
+        <i data-feather="linkedin" class="font-face"></i>
+        <i data-feather="github" class="back-face"></i>
+      </div>
+      <div class="memory-card" data-name="instagram">
+        <i data-feather="instagram" class="font-face"></i>
+        <i data-feather="github" class="back-face"></i>
+      </div>
+    </div>
+    <script>
+      feather.replace();
+    </script>
+
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="./Card.js"></script>
+  </body>
+</html>
