@@ -1,5 +1,5 @@
-@import url(./styles/Card.css);
-@import url(./styles/Body.css);
+@import url(./Card.css);
+@import url(./Box.css);
 
 * {
   padding: 0;
