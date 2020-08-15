@@ -14,32 +14,12 @@ let currentData;
 let historyResults = [];
 
 
-startButton.addEventListener("click", startGame);
-
-restartButton.addEventListener("click", function () {
-  window.location.reload();
-});
-
 function startGame() {
-  shuffle();
+  // shuffle();
   counter();
 
   overlay.style.display = "none";
   welcomeBox.style.display = "none";
-}
-
-function showSummaryBox() {
-  setTimeout(() => {
-    stopCount();
-    loadfromLocalStorage();
-    saveDataGame();
-    displayTime();
-    renderHistoryTable();
-    storeToLocalStorage();
-
-    overlay.style.display = "flex";
-    summaryBox.style.display = "flex";
-  }, 1000);
 }
 
 function counter(){
@@ -52,10 +32,6 @@ function counter(){
 
 function stopCount() {
   clearInterval(interval);
-}
-
-function displayTime() {
-  showTime.innerHTML = `Your time: ${count}s`;
 }
 
 function loadfromLocalStorage() {
@@ -86,7 +62,7 @@ function saveDataGame() {
   historyResults.push(currentData);
 }
 
-function handleTableData(historyResults) {
+function handleTableData() {
   historyResults.sort((a, b) => {
     return a.time - b.time;
   });
@@ -95,7 +71,7 @@ function handleTableData(historyResults) {
 }
 
 function renderHistoryTable() {
-  handleTableData(historyResults);
+  handleTableData();
   let content = historyResults.map((result, index) => {
     return `<tr class="${currentData === result ? "active" : ""}">
           <th scope="row">${index + 1}</th>
@@ -111,4 +87,28 @@ function storeToLocalStorage() {
   localStorage.setItem("history", dataString);
 }
 
-  export default showSummaryBox;
+startButton.addEventListener("click", startGame);
+
+function showSummaryBox() {
+  setTimeout(() => {
+    stopCount();
+    loadfromLocalStorage();
+    saveDataGame();
+    displayTime();
+    renderHistoryTable();
+    storeToLocalStorage();
+
+    overlay.style.display = "flex";
+    summaryBox.style.display = "flex";
+  }, 1000);
+}
+
+function displayTime() {
+  showTime.innerHTML = `Your time: ${count}s`;
+}
+
+restartButton.addEventListener("click", function () {
+  window.location.reload();
+});
+
+export default showSummaryBox;
