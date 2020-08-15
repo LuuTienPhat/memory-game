@@ -15,7 +15,7 @@ let historyResults = [];
 
 
 function startGame() {
-  // shuffle();
+  shuffle();
   counter();
 
   overlay.style.display = "none";
