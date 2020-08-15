@@ -21,11 +21,9 @@ restartButton.addEventListener("click", function () {
 });
 
 function startGame() {
-  hideWelComeBox();
+  shuffle();
   counter();
-}
 
-function hideWelComeBox() {
   overlay.style.display = "none";
   welcomeBox.style.display = "none";
 }
@@ -39,35 +37,31 @@ function showSummaryBox() {
     renderHistoryTable();
     storeToLocalStorage();
 
-    console.log(historyResults);
-
     overlay.style.display = "flex";
     summaryBox.style.display = "flex";
   }, 1000);
+}
+
+function counter(){
+  let second = 0;
+  interval = setInterval(() => {
+    second += 1;
+    count = second;
+  }, 1000);
+}
+
+function stopCount() {
+  clearInterval(interval);
 }
 
 function displayTime() {
   showTime.innerHTML = `Your time: ${count}s`;
 }
 
-function handleTableData(historyResults) {
-  historyResults.sort((a, b) => {
-    return a.time - b.time;
-  });
-  historyResults = [...historyResults.splice(0, 3)];
-  return historyResults;
-}
+function loadfromLocalStorage() {
+  if (!localStorage.history) return;
 
-function renderHistoryTable() {
-  handleTableData(historyResults);
-  let content = historyResults.map((result, index) => {
-    return `<tr class="${currentData === result ? "active" : ""}">
-          <th scope="row">${index + 1}</th>
-          <td>${result.date}</td>
-          <td>${result.time}s</td>
-        </tr>`;
-  });
-  table.innerHTML = `<tbody>${content.join("")}</tbody>`;
+  historyResults = JSON.parse(localStorage.getItem("history"));
 }
 
 function checkTime(num) {
@@ -92,27 +86,29 @@ function saveDataGame() {
   historyResults.push(currentData);
 }
 
-function loadfromLocalStorage() {
-  if (!localStorage.history) return;
+function handleTableData(historyResults) {
+  historyResults.sort((a, b) => {
+    return a.time - b.time;
+  });
+  historyResults = [...historyResults.splice(0, 3)];
+  return historyResults;
+}
 
-  historyResults = JSON.parse(localStorage.getItem("history"));
+function renderHistoryTable() {
+  handleTableData(historyResults);
+  let content = historyResults.map((result, index) => {
+    return `<tr class="${currentData === result ? "active" : ""}">
+          <th scope="row">${index + 1}</th>
+          <td>${result.date}</td>
+          <td>${result.time}s</td>
+        </tr>`;
+  });
+  table.innerHTML = `<tbody>${content.join("")}</tbody>`;
 }
 
 function storeToLocalStorage() {
   const dataString = JSON.stringify(historyResults);
   localStorage.setItem("history", dataString);
 }
-
-function counter(){
-    let second = 0;
-    interval = setInterval(() => {
-      second += 1;
-      count = second;
-    }, 1000);
-  }
-
-function stopCount() {
-    clearInterval(interval);
-  }
 
   export default showSummaryBox;
