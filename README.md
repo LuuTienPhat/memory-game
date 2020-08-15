@@ -1,2 +1,4 @@
 # memoryGame
-Created with CodeSandbox
+@2020 Created by LuuTienPhat
+
+Link: https://luutienphat.github.io/memory-game/
