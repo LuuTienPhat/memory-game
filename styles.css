@@ -26,4 +26,9 @@ svg {
   stroke-width: 2px;
 }
 
+@media(max-width: 360px){
+  *{
+    font-size: 16px;
+  }
+}
 

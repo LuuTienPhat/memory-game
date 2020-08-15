@@ -102,3 +102,39 @@
     background: #777777;
     color: #ffffff;
   }
+
+  @media(max-width: 640px){
+    .overlay .welcome-box{
+      width: 100%;
+    }
+
+    .overlay .summary-box .overlay > *:not(:first-child) {
+      margin: 30px 0 0 0;
+    }
+
+    .overlay .summary-box h1{
+      font-size: 30px;
+    }
+
+    .overlay .summary-box{
+      height: 70%;
+      width: 100%;
+    }
+  }
+
+  @media(max-width: 480px){
+    .overlay .summary-box h1{
+      font-size: 40px;
+    }
+
+    .overlay .summary-box{
+      height: 60%;
+      width: 100%;
+    }
+  }
+
+  @media(max-width: 360px){
+    .overlay .summary-box h1{
+      font-size: 30px;
+    }
+  }
