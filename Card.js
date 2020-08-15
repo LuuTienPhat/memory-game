@@ -1,5 +1,7 @@
 import showSummaryBox from "./index.js";
+
 const cards = document.querySelectorAll(".memory-card");
+
 let firstCard, secondCard;
 let isLockBoard = false;
 let isFliped = false;
@@ -17,14 +19,13 @@ function flipCard() {
   }
 
   secondCard = this;
-  // console.log(firstCard, secondCard);
   checkForMatch();
 }
 
 function checkForMatch() {
-  return firstCard.dataset.name === secondCard.dataset.name
-    ? disableCard()
-    : disableFlipCard();
+  return firstCard.dataset.name === secondCard.dataset.name ?
+    disableCard() :
+    disableFlipCard();
 }
 
 function disableCard() {
@@ -34,9 +35,7 @@ function disableCard() {
   countFinishedCard += 2;
   if (countFinishedCard === 12) {
     showSummaryBox();
-    // console.log("Congratulation");
   }
-  console.log(countFinishedCard);
 
   resetBoard();
 }
@@ -61,8 +60,6 @@ function shuffle() {
     card.style.order = Math.floor(Math.random() * 11);
   });
 }
-
-// shuffle();
 
 cards.forEach((card) => card.addEventListener("click", flipCard));
 
