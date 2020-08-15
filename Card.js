@@ -5,7 +5,7 @@ const cards = document.querySelectorAll(".memory-card");
 let firstCard, secondCard;
 let isLockBoard = false;
 let isFliped = false;
-let countFinishedCard = 10;
+let countFinishedCard = 0;
 
 function flipCard() {
   if (isLockBoard) return;
