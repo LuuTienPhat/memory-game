@@ -21,18 +21,14 @@ restartButton.addEventListener("click", function () {
 });
 
 function startGame() {
-  hideWelcomebox();
+  hideWelComeBox();
   counter();
 }
 
-function hideWelcomebox() {
+function hideWelComeBox() {
   overlay.style.display = "none";
   welcomeBox.style.display = "none";
 }
-
-
-
-
 
 function showSummaryBox() {
   setTimeout(() => {
@@ -53,10 +49,6 @@ function showSummaryBox() {
 function displayTime() {
   showTime.innerHTML = `Your time: ${count}s`;
 }
-
-
-
-
 
 function handleTableData(historyResults) {
   historyResults.sort((a, b) => {
@@ -111,10 +103,6 @@ function storeToLocalStorage() {
   localStorage.setItem("history", dataString);
 }
 
-export default showSummaryBox;
-
-
-
 function counter(){
     let second = 0;
     interval = setInterval(() => {
@@ -126,3 +114,5 @@ function counter(){
 function stopCount() {
     clearInterval(interval);
   }
+
+  export default showSummaryBox;
