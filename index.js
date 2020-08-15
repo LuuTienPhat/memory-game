@@ -18,7 +18,7 @@ restartButton.addEventListener("click", function () {
 });
 
 function startGame() {
-  shuffle();
+  // shuffle();
   hideWelcomebox();
   let second = 0;
   interval = setInterval(() => {
