@@ -5,7 +5,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 20px;
+    padding: 0 20px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
     align-items: center;
     text-align: center;
     background-color: white;
-    border: 5px solid #777777;
+    border: 5px solid #323232;
     border-radius: 10px;
   }
   
@@ -42,7 +42,7 @@
     height: 50px;
     width: 50%;
     background-color: transparent;
-    border: 2px solid #777777;
+    border: 2px solid #323232;
     border-radius: 10px;
     transform: scale(1);
     outline: none;
@@ -64,9 +64,10 @@
     padding: 20px;
     display: none;
     position: relative;
-    background-image: url("../images/party.svg");
-    background-size: cover;
-    background-color: white;
+    background-image: url("../svg/049-kitty-1.svg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
   }
   
   .overlay .summary-box .overlay > *:not(:first-child) {
@@ -75,7 +76,6 @@
   
   .overlay .summary-box h1 {
     font-size: 50px;
-    color: #777777;
   }
   
   .overlay .summary-box p {
@@ -99,11 +99,15 @@
 
   .table > tbody > tr.active > td,
   .table > tbody > tr.active > th {
-    background: #777777;
-    color: #ffffff;
+    background: #323232;
+    color: white;
   }
 
   @media(max-width: 640px){
+    .overlay {
+      padding: 0 100px;
+    }
+
     .overlay .welcome-box{
       width: 100%;
     }
@@ -123,6 +127,11 @@
   }
 
   @media(max-width: 480px){
+    .overlay {
+      padding: 0 50px;
+    }
+
+
     .overlay .summary-box h1{
       font-size: 40px;
     }
@@ -134,6 +143,10 @@
   }
 
   @media(max-width: 360px){
+    .overlay {
+      padding: 0 20px;
+    }
+
     .overlay .summary-box h1{
       font-size: 30px;
     }

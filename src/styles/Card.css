@@ -38,7 +38,7 @@
     padding: 20px;
     position: absolute;
     background-color: white;
-    border: 2px solid #777777;
+    border: 2px solid #323232;
     border-radius: 10px;
     transition: transform 0.2s;
     backface-visibility: hidden;
@@ -48,9 +48,11 @@
     transform: rotateY(180deg);
   }
 
-  @media(max-width: 360px){
+  
+
+  @media(max-width: 480px){
     .memory-game{
-      height: 350px;
+      height: 450px;
     }
 
     .font-face, .back-face{
@@ -58,9 +60,9 @@
     }
   }
 
-  @media(max-width: 480px){
+  @media(max-width: 360px){
     .memory-game{
-      height: 450px;
+      height: 350px;
     }
 
     .font-face, .back-face{
