@@ -6,32 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Memory Game</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="./src/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./src/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./src/favicons/favicon-16x16.png">
-  <link rel="manifest" href="./src/favicons/site.webmanifest">
-  <link rel="stylesheet" href="./src/styles/Body.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-  />
 
-  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="apple-touch-icon" sizes="57x57" href="./src/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./src/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./src/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./src/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./src/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./src/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./src/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./src/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./src/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./src/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./src/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./src/favicons/favicon-16x16.png">
+  <link rel="manifest" href="./src/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="./src/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="./src/styles/Body.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
 </head>
 
 <body>
   <div class="overlay">
-    <div class="welcome-box animate__animated animate__bounceIn">
+    <div class="welcome-box animate__animated animate__tada">
       <h1>MEMORY GAME</h1>
       <button id="start-btn">
-        Click to play
+        Play
       </button>
     </div>
-    <div class="summary-box animate__animated animate__bounceIn">
+    <div class="summary-box animate__animated animate__tada">
       <div class="overlay">
         <h1>
           Congratulation
-          <!-- <img src="./img/party.svg" /> -->
         </h1>
         <p id="show-time">Your time</p>
         <table id="table" class="table"></table>
@@ -41,61 +51,11 @@
       </div>
     </div>
   </div>
-  <div class="memory-game">
-    <!-- <button id="stop-btn">Stop</button> -->
-    <div class="memory-card" data-name="codesandbox">
-      <i data-feather="codesandbox" class="font-face"></i>
-      <i data-feather="github" class="back-face"></i>
-    </div>
-    <div class="memory-card" data-name="linkedin">
-      <i data-feather="linkedin" class="font-face"></i>
-      <i data-feather="github" class="back-face"></i>
-    </div>
-    <div class="memory-card" data-name="codesandbox">
-      <i data-feather="codesandbox" class="font-face"></i>
-      <i data-feather="github" class="back-face"></i>
-    </div>
-    <div class="memory-card" data-name="facebook">
-      <i data-feather="facebook" class="font-face"></i>
-      <i data-feather="github" class="back-face"></i>
-    </div>
-    <div class="memory-card" data-name="twitter">
-      <i data-feather="twitter" class="font-face"></i>
-      <i data-feather="github" class="back-face"></i>
-    </div>
-    <div class="memory-card" data-name="facebook">
-      <i data-feather="facebook" class="font-face"></i>
-      <i data-feather="github" class="back-face"></i>
-    </div>
-    <div class="memory-card" data-name="twitter">
-      <i data-feather="twitter" class="font-face"></i>
-      <i data-feather="github" class="back-face"></i>
-    </div>
-    <div class="memory-card" data-name="youtube">
-      <i data-feather="youtube" class="font-face"></i>
-      <i data-feather="github" class="back-face"></i>
-    </div>
-    <div class="memory-card" data-name="instagram">
-      <i data-feather="instagram" class="font-face"></i>
-      <i data-feather="github" class="back-face"></i>
-    </div>
-    <div class="memory-card" data-name="youtube">
-      <i data-feather="youtube" class="font-face"></i>
-      <i data-feather="github" class="back-face"></i>
-    </div>
-    <div class="memory-card" data-name="linkedin">
-      <i data-feather="linkedin" class="font-face"></i>
-      <i data-feather="github" class="back-face"></i>
-    </div>
-    <div class="memory-card" data-name="instagram">
-      <i data-feather="instagram" class="font-face"></i>
-      <i data-feather="github" class="back-face"></i>
-    </div>
-  </div>
-  <script>
-    feather.replace();
-  </script>
 
+  <div class="memory-game"></div>
+
+
+  <script type="module" src="./src/js/Render.js"></script>
   <script type="module" src="./src/js/index.js"></script>
   <script type="module" src="./src/js/Card.js"></script>
 </body>
