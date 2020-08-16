@@ -35,29 +35,10 @@
   }
   
   .overlay .welcome-box h1 {
+    font-size: 30px;
     margin-bottom: 30px;
   }
-  
-  .overlay button {
-    height: 50px;
-    width: 50%;
-    background-color: transparent;
-    border: 2px solid #323232;
-    border-radius: 10px;
-    transform: scale(1);
-    outline: none;
-  }
-  
-  .overlay .welcome-box h1 {
-    font-size: 30px;
-  }
-  
-  .overlay button:active {
-    transform: scale(0.95);
-    transition: transform 0.3s;
-    outline: none;
-  }
-  
+ 
   .overlay .summary-box {
     height: 400px;
     width: 500px;
@@ -82,10 +63,22 @@
     text-decoration: underline;
   }
   
-  .summary-box h1 img {
-    width: 100px;
+  .overlay button {
+    height: 50px;
+    width: 50%;
+    background-color: transparent;
+    border: 2px solid #323232;
+    border-radius: 10px;
+    transform: scale(1);
+    outline: none;
   }
   
+  .overlay button:active {
+    transform: scale(0.95);
+    transition: transform 0.3s;
+    outline: none;
+  }
+
   .table {
     width: 100%;
     border-collapse: collapse;
