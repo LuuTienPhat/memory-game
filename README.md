@@ -1,4 +1,5 @@
 # Memory Game
-@2020 Created by LUUTIENPHAT
+
+This game made by cat lover =))
 
 https://luutienphat.github.io/memory-game/
